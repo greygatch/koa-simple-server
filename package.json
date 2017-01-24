@@ -10,6 +10,7 @@
   "author": "Evan Gatchell",
   "license": "ISC",
   "dependencies": {
-    "koa": "^1.2.4"
+    "koa": "^1.2.4",
+    "koa-route": "^2.4.2"
   }
 }
