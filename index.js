@@ -14,6 +14,11 @@ const petsHandler = {
     console.log(`pets: ${names.join(', ')}`);
     this.response = 200;
   },
+  show: function *(name){
+    const pet = db[name];
+    if (!pet) return this.throw('cannot find that pet', 404);
+    this.response = 200;
+  }
 };
 
 app.use(_.get('/pets', petsHandler.list));
